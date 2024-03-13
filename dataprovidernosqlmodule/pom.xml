@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.vitorio</groupId>
-        <artifactId>MavenAndJPMSCleanArchitechtureExample</artifactId>
+        <artifactId>MavenModulesAndJPMSCleanArchitectureExample</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

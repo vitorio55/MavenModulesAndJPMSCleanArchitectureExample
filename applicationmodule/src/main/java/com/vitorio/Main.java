@@ -14,8 +14,9 @@ public class Main {
         DataAccessInterface dai = new NoSqlDataProvider();
         UseCaseInteractorFactory factory = new UseCaseInteractorFactory(dai);
         InputData inputData = new InputData(3, 2, CompanyType.FIRST);
-        int result = factory.createUseCaseInteractor(UseCase.CALCULATE_COMPANY, inputData)
+        int result = factory
+            .createUseCaseInteractor(UseCase.CALCULATE_COMPANY, inputData)
             .interact();
-        System.out.println("In main, endpoint returned: " + result);
+        System.out.println("In main, use case resulted in val: " + result);
     }
 }
