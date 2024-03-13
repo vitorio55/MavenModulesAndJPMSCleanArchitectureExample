@@ -4,4 +4,5 @@ module com.vitorio.applicationmodule {
     requires com.vitorio.usecaseinteractormodule;
     requires com.vitorio.dataprovidersqlmodule;
     requires com.vitorio.dataprovidernosqlmodule;
+    requires com.vitorio.dataproviderrestmodule;
 }

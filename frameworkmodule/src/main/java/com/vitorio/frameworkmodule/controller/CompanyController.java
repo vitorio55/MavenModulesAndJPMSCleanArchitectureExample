@@ -1,6 +1,7 @@
 package com.vitorio.frameworkmodule.controller;
 
 import com.vitorio.frameworkmodule.dto.CalculateCompanyDto;
+import com.vitorio.usecaseinteractormodule.boundary.OutputBoundary;
 import com.vitorio.usecaseinteractormodule.boundary.UseCaseInteractorFactory;
 import com.vitorio.usecaseinteractormodule.common.UseCase;
 import com.vitorio.usecaseinteractormodule.data.InputData;
@@ -16,8 +17,8 @@ public class CompanyController {
     private final UseCaseInteractorFactory factory;
 
     @Autowired
-    public CompanyController(DataAccessInterface dai) {
-        this.factory = new UseCaseInteractorFactory(dai);
+    public CompanyController(DataAccessInterface dataAccessInterface, OutputBoundary externalRestClient) {
+        this.factory = new UseCaseInteractorFactory(dataAccessInterface, externalRestClient);
     }
 
     @PostMapping("/")

@@ -19,6 +19,7 @@
         <!-- Data Providers -->
         <module>dataprovidersqlmodule</module>
         <module>dataprovidernosqlmodule</module>
+        <module>dataproviderrestmodule</module>
         <!-- Entry Points -->
         <module>entrypointsqsmodule</module>
         <!-- Frameworks -->

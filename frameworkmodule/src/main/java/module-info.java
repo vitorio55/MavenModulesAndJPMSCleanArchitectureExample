@@ -22,7 +22,8 @@ module com.vitorio.frameworkmodule {
     requires com.vitorio.entrypointmodule;
     requires com.vitorio.businessentitymodule;
     requires com.vitorio.usecaseinteractormodule;
+    requires com.vitorio.entrypointsqsmodule;
     requires com.vitorio.dataprovidersqlmodule;
     requires com.vitorio.dataprovidernosqlmodule;
-    requires com.vitorio.entrypointsqsmodule;
+    requires com.vitorio.dataproviderrestmodule;
 }

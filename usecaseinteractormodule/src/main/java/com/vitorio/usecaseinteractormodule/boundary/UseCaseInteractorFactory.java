@@ -10,17 +10,19 @@ import com.vitorio.usecaseinteractormodule.persistence.DataAccessInterface;
 public class UseCaseInteractorFactory {
 
     private final DataAccessInterface dataAccessInterface;
+    private final OutputBoundary externalClient;
 
-    public UseCaseInteractorFactory(DataAccessInterface dai) {
-        this.dataAccessInterface = dai;
+    public UseCaseInteractorFactory(DataAccessInterface dataAccessInterface, OutputBoundary externalClient) {
+        this.dataAccessInterface = dataAccessInterface;
+        this.externalClient = externalClient;
     }
 
     public InputBoundary createUseCaseInteractor(UseCase useCase, InputData inputData) {
         if (useCase == UseCase.CALCULATE_COMPANY) {
             CompanyCalculationsFactory ccf = new CompanyCalculationsFactory();
-            CompanyCalculations companyCalculations = ccf.createCompanyCalculations(inputData.getVal0(),
-                inputData.getVal1(), inputData.getCompanyType());
-            return new CalculateCompanyUseCaseInteractor(companyCalculations, dataAccessInterface);
+            CompanyCalculations companyCalculations = ccf.createCompanyCalculations(inputData.val0(),
+                inputData.val1(), inputData.companyType());
+            return new CalculateCompanyUseCaseInteractor(companyCalculations, dataAccessInterface, externalClient);
         }
         System.out.println("No use case selected!!");
         return null;

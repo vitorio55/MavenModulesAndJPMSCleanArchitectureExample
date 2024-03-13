@@ -1,4 +1,4 @@
 package com.vitorio.usecaseinteractormodule.data;
 
-public class OutputData {
+public record OutputData(int calculationResult) {
 }
