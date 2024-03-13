@@ -12,13 +12,19 @@
     <name>multimodulemavenproject</name>
 
     <modules>
-        <module>dataprovidersqlmodule</module>
+        <!-- Business Entities -->
         <module>businessentitymodule</module>
-        <module>entrypointmodule</module>
+        <!-- Use Cases -->
         <module>usecaseinteractormodule</module>
-        <module>applicationmodule</module>
-        <module>frameworkmodule</module>
+        <!-- Data Providers -->
+        <module>dataprovidersqlmodule</module>
         <module>dataprovidernosqlmodule</module>
+        <!-- Entry Points -->
+        <module>entrypointsqsmodule</module>
+        <!-- Frameworks -->
+        <module>frameworkmodule</module>
+        <!-- Other -->
+        <module>applicationmodule</module>
     </modules>
 
     <build>
@@ -40,6 +46,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 </project>

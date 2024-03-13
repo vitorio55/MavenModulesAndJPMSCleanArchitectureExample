@@ -1,5 +1,5 @@
 package com.vitorio.businessentitymodule.common;
 
-public enum Company {
+public enum CompanyType {
     FIRST, SECOND
 }

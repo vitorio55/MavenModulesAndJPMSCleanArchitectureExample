@@ -3,7 +3,6 @@ package com.vitorio.usecaseinteractormodule;
 import com.vitorio.businessentitymodule.CompanyCalculations;
 import com.vitorio.usecaseinteractormodule.persistence.DataAccessInterface;
 import com.vitorio.usecaseinteractormodule.boundary.InputBoundary;
-import com.vitorio.usecaseinteractormodule.data.InputData;
 
 public class CalculateCompanyUseCaseInteractor implements InputBoundary {
 
@@ -16,7 +15,7 @@ public class CalculateCompanyUseCaseInteractor implements InputBoundary {
     }
 
     @Override
-    public int interact(InputData data) {
+    public int interact() {
         System.out.println("Calculated: " + companyCalculations.calc());
         int calculated = companyCalculations.calc();
         dataAccessInterface.saveCalcResult(calculated);

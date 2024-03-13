@@ -10,12 +10,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.vitorio.entrypointmodule</groupId>
-    <artifactId>entrypointmodule</artifactId>
+    <groupId>com.vitorio.entrypointsqsmodule</groupId>
+    <artifactId>entrypointsqsmodule</artifactId>
 
     <!--    <version>1.0-SNAPSHOT</version>-->
     <!--    <packaging>jar</packaging>-->
-    <!--    <name>entrypointmodule</name>-->
+    <!--    <name>entrypointsqsmodule</name>-->
 
     <dependencies>
         <dependency>
