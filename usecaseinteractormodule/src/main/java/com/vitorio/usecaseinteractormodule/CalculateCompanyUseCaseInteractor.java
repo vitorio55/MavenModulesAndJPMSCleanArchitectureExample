@@ -10,13 +10,13 @@ public class CalculateCompanyUseCaseInteractor implements InputBoundary {
 
     private final CompanyCalculations companyCalculations;
     private final DataAccessInterface dataAccessInterface;
-    private final OutputBoundary externalRestClient;
+    private final OutputBoundary outputBoundary;
 
     public CalculateCompanyUseCaseInteractor(CompanyCalculations companyCalculations, DataAccessInterface dataAccessInterface,
-                                             OutputBoundary externalRestClient) {
+                                             OutputBoundary outputBoundary) {
         this.companyCalculations = companyCalculations;
         this.dataAccessInterface = dataAccessInterface;
-        this.externalRestClient = externalRestClient;
+        this.outputBoundary = outputBoundary;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class CalculateCompanyUseCaseInteractor implements InputBoundary {
         int calculated = companyCalculations.calc();
         dataAccessInterface.saveCalcResult(calculated);
         OutputData od = new OutputData(calculated);
-        externalRestClient.interact(od);
+        outputBoundary.interact(od);
         return calculated;
     }
 }
