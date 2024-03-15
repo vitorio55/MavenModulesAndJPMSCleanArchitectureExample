@@ -8,7 +8,7 @@ import java.util.*;
 
 public class JpmsUtil {
 
-    private final ForbiddenModulesDefinitionProvider fmdp = new ForbiddenModulesDefinitionProvider();
+    private final ForbiddenModulesDefinitionsProvider provider = new ForbiddenModulesDefinitionsProvider();
 
     public Set<String> getApplicationsJpmsModules() {
         Set<String> applicationModules = new HashSet<>();
@@ -49,8 +49,7 @@ public class JpmsUtil {
         return moduleOptional.get();
     }
 
-    public List<String> getForbiddenInternalJPMSDependenciesForThisModule() {
-        return fmdp.getForbiddenInternalJPMSDependenciesForThisModule();
+    public Set<String> getForbiddenInternalJPMSDependenciesForThisModule() {
+        return provider.getForbiddenInternalJPMSDependenciesForThisModule();
     }
-
 }

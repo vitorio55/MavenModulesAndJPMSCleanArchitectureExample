@@ -3,14 +3,13 @@ package com.vitorio.businessentitymodule.util;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class MavenModulesUtil {
 
-    private final ForbiddenModulesDefinitionProvider fmdp = new ForbiddenModulesDefinitionProvider();
+    private final ForbiddenModulesDefinitionsProvider provider = new ForbiddenModulesDefinitionsProvider();
 
     public static final Pattern DEPENDENCIES_ARTIFACT_ID_TAG_PATTERN = Pattern.compile(
         "<dependency>\\s*<groupId>.*?</groupId>\\s*<artifactId>(.*?)</artifactId>\\s*<version>.*?</version>\\s*(<scope>.*?</scope>\\s*)?</dependency>\n",
@@ -24,7 +23,7 @@ public class MavenModulesUtil {
             .collect(Collectors.toSet());
     }
 
-    public List<String> getForbiddenMavenInternalArtifactIdsForThisModule() {
-        return fmdp.getForbiddenMavenInternalArtifactIdsForThisModule();
+    public Set<String> getForbiddenMavenInternalArtifactIdsForThisModule() {
+        return provider.getForbiddenMavenInternalArtifactIdsForThisModule();
     }
 }

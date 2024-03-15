@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.lang.module.ModuleDescriptor;
 import java.lang.module.ModuleReference;
-import java.util.List;
 import java.util.Set;
 
 public class ArchitectureJpmsTests {
@@ -19,7 +18,7 @@ public class ArchitectureJpmsTests {
         Set<String> jpmsModules = jpmsUtil.getApplicationsJpmsModules();
         ModuleReference mod = jpmsUtil.getCurrentJpmsModule();
         Set<ModuleDescriptor.Requires> requiredModules = mod.descriptor().requires();
-        List<String> forbiddenModules = jpmsUtil.getForbiddenInternalJPMSDependenciesForThisModule();
+        Set<String> forbiddenModules = jpmsUtil.getForbiddenInternalJPMSDependenciesForThisModule();
         for (ModuleDescriptor.Requires r : requiredModules) {
             Assertions.assertFalse(forbiddenModules.contains(r.name()), String.format(errMsg,  r.name()));
         }
