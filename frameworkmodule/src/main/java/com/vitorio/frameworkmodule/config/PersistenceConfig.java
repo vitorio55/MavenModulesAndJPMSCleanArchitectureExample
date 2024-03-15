@@ -1,8 +1,7 @@
 package com.vitorio.frameworkmodule.config;
 
 import com.vitorio.dataprovidernosqlmodule.NoSqlDataProvider;
-import com.vitorio.dataprovidersqlmodule.SqlDataProvider;
-import com.vitorio.usecaseinteractormodule.persistence.DataAccessInterface;
+import com.vitorio.usecasemodule.persistence.DataAccessInterface;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

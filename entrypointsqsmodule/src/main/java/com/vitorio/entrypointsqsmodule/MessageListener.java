@@ -1,6 +1,6 @@
 package com.vitorio.entrypointsqsmodule;
 
-import com.vitorio.usecaseinteractormodule.data.InputData;
+import com.vitorio.usecasemodule.data.InputData;
 
 public interface MessageListener {
     void receiveMessage(InputData messageBody);

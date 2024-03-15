@@ -21,7 +21,7 @@ module com.vitorio.frameworkmodule {
     // Dependencies within this project
     requires com.vitorio.entrypointmodule;
     requires com.vitorio.businessentitymodule;
-    requires com.vitorio.usecaseinteractormodule;
+    requires com.vitorio.usecasemodule;
     requires com.vitorio.entrypointsqsmodule;
     requires com.vitorio.dataprovidersqlmodule;
     requires com.vitorio.dataprovidernosqlmodule;

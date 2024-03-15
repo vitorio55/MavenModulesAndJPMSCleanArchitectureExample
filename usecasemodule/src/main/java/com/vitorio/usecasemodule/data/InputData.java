@@ -1,4 +1,4 @@
-package com.vitorio.usecaseinteractormodule.data;
+package com.vitorio.usecasemodule.data;
 
 import com.vitorio.businessentitymodule.common.CompanyType;
 

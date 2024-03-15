@@ -1,4 +1,4 @@
-package com.vitorio.usecaseinteractormodule.persistence;
+package com.vitorio.usecasemodule.persistence;
 
 public interface DataAccessInterface {
     int saveCalcResult(int result);

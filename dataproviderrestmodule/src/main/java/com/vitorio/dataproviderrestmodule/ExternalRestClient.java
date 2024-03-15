@@ -1,7 +1,7 @@
 package com.vitorio.dataproviderrestmodule;
 
-import com.vitorio.usecaseinteractormodule.boundary.OutputBoundary;
-import com.vitorio.usecaseinteractormodule.data.OutputData;
+import com.vitorio.usecasemodule.boundary.OutputBoundary;
+import com.vitorio.usecasemodule.data.OutputData;
 
 public class ExternalRestClient implements OutputBoundary {
 

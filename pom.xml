@@ -15,7 +15,7 @@
         <!-- Business Entities -->
         <module>businessentitymodule</module>
         <!-- Use Cases -->
-        <module>usecaseinteractormodule</module>
+        <module>usecasemodule</module>
         <!-- Data Providers -->
         <module>dataprovidersqlmodule</module>
         <module>dataprovidernosqlmodule</module>

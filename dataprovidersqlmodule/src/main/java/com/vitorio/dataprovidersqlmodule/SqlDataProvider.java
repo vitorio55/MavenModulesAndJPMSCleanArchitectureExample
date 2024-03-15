@@ -1,6 +1,6 @@
 package com.vitorio.dataprovidersqlmodule;
 
-import com.vitorio.usecaseinteractormodule.persistence.DataAccessInterface;
+import com.vitorio.usecasemodule.persistence.DataAccessInterface;
 
 public class SqlDataProvider implements DataAccessInterface {
 

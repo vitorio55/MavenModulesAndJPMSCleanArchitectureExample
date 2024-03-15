@@ -10,12 +10,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.vitorio.usecaseinteractormodule</groupId>
-    <artifactId>usecaseinteractormodule</artifactId>
+    <groupId>com.vitorio.usecasemodule</groupId>
+    <artifactId>usecasemodule</artifactId>
 
     <!--    <version>1.0-SNAPSHOT</version>-->
     <!--    <packaging>jar</packaging>-->
-    <!--    <name>usecaseinteractormodule</name>-->
+    <!--    <name>usecasemodule</name>-->
 
     <dependencies>
         <dependency>

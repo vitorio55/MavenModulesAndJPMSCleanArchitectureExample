@@ -1,19 +1,19 @@
-package com.vitorio.usecaseinteractormodule;
+package com.vitorio.usecasemodule;
 
 import com.vitorio.businessentitymodule.CompanyCalculations;
-import com.vitorio.usecaseinteractormodule.boundary.OutputBoundary;
-import com.vitorio.usecaseinteractormodule.data.OutputData;
-import com.vitorio.usecaseinteractormodule.persistence.DataAccessInterface;
-import com.vitorio.usecaseinteractormodule.boundary.InputBoundary;
+import com.vitorio.usecasemodule.boundary.OutputBoundary;
+import com.vitorio.usecasemodule.data.OutputData;
+import com.vitorio.usecasemodule.persistence.DataAccessInterface;
+import com.vitorio.usecasemodule.boundary.InputBoundary;
 
-public class CalculateCompanyUseCaseInteractor implements InputBoundary {
+public class CalculateCompanyUseCase implements InputBoundary {
 
     private final CompanyCalculations companyCalculations;
     private final DataAccessInterface dataAccessInterface;
     private final OutputBoundary outputBoundary;
 
-    public CalculateCompanyUseCaseInteractor(CompanyCalculations companyCalculations, DataAccessInterface dataAccessInterface,
-                                             OutputBoundary outputBoundary) {
+    public CalculateCompanyUseCase(CompanyCalculations companyCalculations, DataAccessInterface dataAccessInterface,
+                                   OutputBoundary outputBoundary) {
         this.companyCalculations = companyCalculations;
         this.dataAccessInterface = dataAccessInterface;
         this.outputBoundary = outputBoundary;
