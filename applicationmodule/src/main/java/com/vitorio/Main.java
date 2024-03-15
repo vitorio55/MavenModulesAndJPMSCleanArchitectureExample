@@ -4,10 +4,11 @@ import com.vitorio.businessentitymodule.common.CompanyType;
 import com.vitorio.dataprovidernosqlmodule.NoSqlDataProvider;
 import com.vitorio.dataproviderrestmodule.ExternalRestClient;
 import com.vitorio.usecasemodule.boundary.OutputBoundary;
+import com.vitorio.usecasemodule.UseCaseFactoryImpl;
 import com.vitorio.usecasemodule.common.UseCase;
 import com.vitorio.usecasemodule.data.InputData;
 import com.vitorio.usecasemodule.persistence.DataAccessInterface;
-import com.vitorio.usecasemodule.boundary.UseCaseFactory;
+import com.vitorio.usecasemodule.UseCaseFactory;
 
 public class Main {
 
@@ -15,7 +16,7 @@ public class Main {
         //DataAccessInterface dai = new SqlDataProvider();
         DataAccessInterface dataAccessInterface = new NoSqlDataProvider();
         OutputBoundary externalRestClient = new ExternalRestClient();
-        UseCaseFactory factory = new UseCaseFactory(dataAccessInterface, externalRestClient);
+        UseCaseFactory factory = new UseCaseFactoryImpl(dataAccessInterface, externalRestClient);
         InputData inputData = new InputData(3, 2, CompanyType.FIRST);
         int result = factory
             .createUseCase(UseCase.CALCULATE_COMPANY, inputData)

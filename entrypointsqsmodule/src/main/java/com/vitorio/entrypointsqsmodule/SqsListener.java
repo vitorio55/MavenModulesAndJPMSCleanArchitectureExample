@@ -1,7 +1,7 @@
 package com.vitorio.entrypointsqsmodule;
 
 import com.vitorio.businessentitymodule.common.CompanyType;
-import com.vitorio.usecasemodule.boundary.UseCaseFactory;
+import com.vitorio.usecasemodule.UseCaseFactory;
 import com.vitorio.usecasemodule.common.UseCase;
 import com.vitorio.usecasemodule.data.InputData;
 
